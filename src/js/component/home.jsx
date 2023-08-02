@@ -84,6 +84,13 @@ const Home = () => {
             </div>
             <div className=" todoList pliegue border mx-1"></div>
             <div className="todoList pliegue border mx-2"></div>
+            <button
+              className="btn btn-danger mt-3"
+              onClick={() => setTodoList([])}
+            >
+              {" "}
+              Eliminar Tareas
+            </button>
           </div>
         </div>
       </div>
