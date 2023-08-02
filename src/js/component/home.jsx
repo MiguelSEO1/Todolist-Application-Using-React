@@ -1,12 +1,7 @@
-
 import React, { useState } from "react";
-
-
-
 
 //create your first component
 const Home = () => {
-
   const [todoList, setTodoList] = useState([]);
   const [alert, setAlert] = useState(false);
   const [alert2, setAlert2] = useState(false);
@@ -49,7 +44,7 @@ const Home = () => {
                 ) {
                   setAlert2(true);
                   setAlert(false);
-                } else if ((e.key = "Enter" && e.target.value == "")) {
+                } else if (e.key == "Enter" && e.target.value == "") {
                   setAlert(true);
                   setAlert2(false);
                 }
