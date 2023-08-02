@@ -4,7 +4,9 @@
 # track this file .gitignore (i.e. do NOT ignore it)
 !.gitignore
 !.gitpod.yml
+!.devcontainer
 !.github
+!.vscode
 php_errorlog
 .log
 

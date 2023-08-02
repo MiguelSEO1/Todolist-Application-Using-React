@@ -1,30 +1,25 @@
 # Hello World with React boilerplate
-<p>
-  <a href="https://gitpod.io#https://github.com/4GeeksAcademy/react-hello.git"><img src="https://raw.githubusercontent.com/4GeeksAcademy/react-hello/master/open-in-gitpod.svg?sanitize=true" />
-  </a>
-</p>
 
-This template is similar to create-react-app but it's meant for 4Geeks Academy students.
+Start coding a react application
 
-##### Download the boilerplate using git
+> If you are working locally instead of using codespaces or gitpod, please follow [local installation steps](#local-installation-skip-if-you-are-working-on-codespaces-or-gitpod) and come back to this part of the readme.
+
+## How to start coding?
+
+- Install the packages with `$ npm install`.
+- Run the webpack server with `$ npm run start`
+
+You can update the `styles/index.css` or `js/index.js` depending on your needs.
+Add more files into your, `./src/js/components` or styles folder as you need them.
+
+## Local Installation (skip if you are working on codespaces or gitpod)
+
+Download the boilerplate using git
 
 ```
 $ git clone https://github.com/4GeeksAcademy/react-hello.git
 $ cd react-hello
 ```
-
-##### and install the npm package:
-```
-$ npm install
-```
-
-## Start coding!
-
-For Windows, Mac, Linux or Gitpod, start the webpack server with live reload:
-- `$ npm run start`
-
-You can update the `styles/index.css` or `js/index.js` depending on your needs.
-Add more files into your, `./src/js/components` or styles folder as you need them.
 
 ## Publish your website!
 
@@ -39,3 +34,9 @@ It takes just 2 minutes to deploy, [click here to start the process](https://git
 - Hot Deploy: Use of [Webpack Development Server](https://webpack.js.org/configuration/dev-server/) for hot deploy and live reload.
 - One-command publish of the code to github pages with `npm run deploy:github`.
 - Babel 7 (really fast).
+
+### Contributors
+
+This template was built as part of the 4Geeks Academy [Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp) by [Alejandro Sanchez](https://twitter.com/alesanchezr) and many other contributors. Find out more about our [Full Stack Developer Course](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer), and [Data Science Bootcamp](https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning).
+
+You can find other templates and resources like this at the [school github page](https://github.com/4geeksacademy/).
