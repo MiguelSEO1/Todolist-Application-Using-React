@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 //create your first component
 const Home = () => {
   const [todoList, setTodoList] = useState([]);
+  const [todo, setTodo] = useState([]);
   const [alert, setAlert] = useState(false);
   const [alert2, setAlert2] = useState(false);
+  const inputRef = useRef(null);
 
   return (
     <section className="Fondo">
@@ -28,7 +30,9 @@ const Home = () => {
               ) : null}
             </div>
             <input
+              ref={inputRef}
               onKeyUp={(e) => {
+                setTodo(e.target.value);
                 if (
                   e.key == "Enter" &&
                   e.target.value.trim() != "" &&
@@ -85,10 +89,36 @@ const Home = () => {
             <div className=" todoList pliegue border mx-1"></div>
             <div className="todoList pliegue border mx-2"></div>
             <button
-              className="btn btn-danger mt-3"
-              onClick={() => setTodoList([])}
+              className="btn btn-success mt-3 mx-2"
+              onClick={() => {
+                if (
+                  inputRef.current.value.trim() != "" &&
+                  !todoList.includes(inputRef.current.value.trim())
+                ) {
+                  setTodoList([...todoList, todo.trim()]);
+                  inputRef.current.value = "";
+                  setTodo("");
+                  setAlert(false);
+                  setAlert2(false);
+                } else if (inputRef.current.value.trim() == "") {
+                  setAlert(true);
+                  setAlert2(false);
+                } else if (todoList.includes(inputRef.current.value.trim())) {
+                  setAlert(false);
+                  setAlert2(true);
+                }
+              }}
             >
-              {" "}
+              Añadir tarea
+            </button>
+            <button
+              className="btn btn-danger mt-3 mx-2"
+              onClick={() => {
+                setTodoList([]);
+                setAlert(false);
+                setAlert2(false);
+              }}
+            >
               Eliminar Tareas
             </button>
           </div>
